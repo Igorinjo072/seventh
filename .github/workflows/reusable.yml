@@ -4,7 +4,7 @@ on:
     inputs: 
       artefact-name:
         description: Geting the name of the deployanle artifacts
-        required: true
+        required: false
         default: dist
         type: string
 jobs:
