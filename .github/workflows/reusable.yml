@@ -5,14 +5,14 @@ on:
       artifact-name:
         description: Geting the name of the deployanle artifacts
         required: false
-        default: dist-files
+        default: dist
         type: string
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Get code
-        uses: actions/download-artifacts@v4
+        uses: actions/download-artifact@v4
         with:
           name: ${{ inputs.artifact-name }}
       - name: Output information
