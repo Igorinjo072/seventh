@@ -2,7 +2,7 @@ name: Reusable Deploy
 on: 
   workflow_call:
     inputs: 
-      artefact-name:
+      artifact-name:
         description: Geting the name of the deployanle artifacts
         required: false
         default: dist
@@ -14,7 +14,7 @@ jobs:
       - name: Get code
         uses: actions/download-artifacts@v4
         with:
-          name: ${{ inputs.artefact-name }}
+          name: ${{ inputs.artifact-name }}
       - name: Output information
         run: echo "Deployng & uploading ..." 
 
